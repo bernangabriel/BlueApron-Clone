@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="BlueApron.Controls.FormEntry"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:render="clr-namespace:BlueApron.Renderers">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label
+            x:Name="entryWhiteBoxLabel"
+            Grid.Row="0"
+            FontAttributes="Bold"
+            FontSize="15"
+            TextColor="{StaticResource colorPrimary}" />
+
+        <render:EntryWhiteBox
+            x:Name="entryWhiteBox"
+            Grid.Row="1"
+            IsVisible="True" />
+
+        <AbsoluteLayout
+            x:Name="pickerBox"
+            Grid.Row="1"
+            HorizontalOptions="FillAndExpand"
+            IsVisible="False"
+            VerticalOptions="FillAndExpand">
+            <render:PickerWhiteBox
+                x:Name="entryWhiteBoxPicker"
+                AbsoluteLayout.LayoutBounds="1,1,1,1"
+                AbsoluteLayout.LayoutFlags="All"
+                IsVisible="False">
+                <Picker.ItemsSource>
+                    <x:Array Type="{Type x:String}">
+                        <x:String>North Carolina</x:String>
+                        <x:String>Seattle</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </render:PickerWhiteBox>
+
+            <Image
+                AbsoluteLayout.LayoutBounds="1,0.5"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                HeightRequest="25"
+                Source="arrow_down.png"
+                WidthRequest="25" />
+        </AbsoluteLayout>
+    </Grid>
+</ContentView>

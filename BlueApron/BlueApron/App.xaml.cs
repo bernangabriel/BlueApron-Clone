@@ -9,7 +9,7 @@ namespace BlueApron
         public App()
         {
             InitializeComponent();
-            var root = new Views.SelectPlanPage();
+            var root = new Views.DeliverFormPage();
             MainPage = root;
         }
 
