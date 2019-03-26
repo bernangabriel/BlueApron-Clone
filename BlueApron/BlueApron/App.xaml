@@ -3,6 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BlueApron.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            
+            <!--String-->
+            <x:String x:Key="mainTitle">Food is better when you</x:String>
+            <x:String x:Key="secondTitle">start from scratch</x:String>
+            <x:String x:Key="dinnerTitle">Dinner, the Blue Apron way</x:String>
+            
+            <!--Colors-->
+            <Color x:Key="colorPrimary">#233367</Color>
+            <Color x:Key="colorWhite">#fff</Color>
+            <Color x:Key="colorOrange">#E7581D</Color>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
