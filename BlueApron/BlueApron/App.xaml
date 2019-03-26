@@ -1,19 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BlueApron.App">
+<Application
+    x:Class="BlueApron.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <Application.Resources>
         <ResourceDictionary>
-            
-            <!--String-->
+
+            <!--  String  -->
             <x:String x:Key="mainTitle">Food is better when you</x:String>
             <x:String x:Key="secondTitle">start from scratch</x:String>
             <x:String x:Key="dinnerTitle">Dinner, the Blue Apron way</x:String>
-            
-            <!--Colors-->
+
+            <!--  Colors  -->
             <Color x:Key="colorPrimary">#233367</Color>
             <Color x:Key="colorWhite">#fff</Color>
             <Color x:Key="colorOrange">#E7581D</Color>
+            <Color x:Key="colorGreyLight">#f1f2f6</Color>
+            <Color x:Key="colorGreyLight_100">#a4b0be</Color>
+            <Color x:Key="colorGreyDark">#838383</Color>
+            <Color x:Key="colorGreen">#27ae60</Color>
+
+            <!--  Common Label Styles  -->
+            <Style x:Key="styleLabelCommon" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource colorPrimary}" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

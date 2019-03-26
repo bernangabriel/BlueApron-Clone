@@ -7,21 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace BlueApron.Views
+namespace BlueApron.Controls
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : ContentPage
+    public partial class FoodItem : ContentView
     {
-        MainPage vm = null;
-        public MainPage()
+        public FoodItem()
         {
             InitializeComponent();
-            BindingContext = vm = new MainPage();
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
         }
     }
 }
