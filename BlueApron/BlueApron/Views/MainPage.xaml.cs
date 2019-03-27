@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlueApron.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,11 +13,12 @@ namespace BlueApron.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
-        MainPage vm = null;
+        MainPageViewModel vm = null;
+
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = vm = new MainPage();
+            BindingContext = vm = new MainPageViewModel();
         }
 
         protected override void OnAppearing()

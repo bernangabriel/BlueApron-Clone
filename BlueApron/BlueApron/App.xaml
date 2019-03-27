@@ -27,7 +27,6 @@
                 <Setter Property="FontAttributes" Value="Bold" />
             </Style>
 
-
         </ResourceDictionary>
     </Application.Resources>
 </Application>

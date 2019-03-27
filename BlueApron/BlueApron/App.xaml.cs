@@ -9,8 +9,8 @@ namespace BlueApron
         public App()
         {
             InitializeComponent();
-            var root = new Views.DeliverFormPage();
-            MainPage = root;
+            var root = new Views.MainPage();
+            MainPage = new NavigationPage(root);
         }
 
         protected override void OnStart()

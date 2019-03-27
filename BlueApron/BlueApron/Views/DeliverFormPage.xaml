@@ -4,6 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ctrl="clr-namespace:BlueApron.Controls"
+    Title="Where should we deliver?"
     BackgroundColor="{StaticResource Key=colorGreyLight}">
     <ContentPage.Content>
         <Grid Padding="10" RowSpacing="20">
@@ -22,65 +23,57 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Label
-                Grid.Row="0"
-                Grid.ColumnSpan="2"
-                Margin="0,10,0,20"
-                HorizontalOptions="CenterAndExpand"
-                Style="{StaticResource Key=styleLabelCommon}"
-                Text="Where should we deliver?" />
-
             <!--  Row  -->
             <ctrl:FormEntry
-                Grid.Row="1"
+                Grid.Row="0"
                 Grid.Column="0"
                 FormEntryLabel="First Name" />
 
             <ctrl:FormEntry
-                Grid.Row="1"
+                Grid.Row="0"
                 Grid.Column="1"
                 FormEntryLabel="Last Name" />
 
             <!--  Row  -->
             <ctrl:FormEntry
-                Grid.Row="2"
+                Grid.Row="1"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
                 FormEntryLabel="Address" />
 
             <!--  Row  -->
             <ctrl:FormEntry
-                Grid.Row="3"
+                Grid.Row="2"
                 Grid.Column="0"
                 FormEntryLabel="Apt/Suite/Florr #" />
 
             <ctrl:FormEntry
-                Grid.Row="3"
+                Grid.Row="2"
                 Grid.Column="1"
                 FormEntryLabel="Zip" />
 
             <!--  Row  -->
             <ctrl:FormEntry
-                Grid.Row="4"
+                Grid.Row="3"
                 Grid.Column="0"
                 FormEntryLabel="City" />
 
             <ctrl:FormEntry
-                Grid.Row="4"
+                Grid.Row="3"
                 Grid.Column="1"
                 FormEntryLabel="State"
                 IsPicker="True" />
 
             <!--  Row  -->
             <ctrl:FormEntry
-                Grid.Row="5"
+                Grid.Row="4"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
                 FormEntryLabel="Phone Number" />
 
             <!--  Row  -->
             <ctrl:FormEntry
-                Grid.Row="6"
+                Grid.Row="5"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
                 FormEntryLabel="Special Instructions (optional)"
@@ -89,7 +82,7 @@
 
             <!--  Row  -->
             <Button
-                Grid.Row="7"
+                Grid.Row="6"
                 Grid.ColumnSpan="2"
                 BackgroundColor="{StaticResource Key=colorPrimary}"
                 HeightRequest="50"
@@ -97,7 +90,6 @@
                 Text="Continue"
                 TextColor="{StaticResource colorWhite}"
                 VerticalOptions="EndAndExpand" />
-
         </Grid>
     </ContentPage.Content>
 </ContentPage>

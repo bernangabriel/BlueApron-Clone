@@ -1,12 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BlueApron.Views.MainPage">
+<ContentPage
+    x:Class="BlueApron.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Padding="10,30,10,10"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonActionStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource colorWhite}" />
+                <Setter Property="BackgroundColor" Value="{StaticResource colorPrimary}" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="10">
+            <Button
+                Command="{Binding OnLoginCommand}"
+                Style="{StaticResource buttonActionStyle}"
+                Text="Log In" />
+
+            <Button
+                Command="{Binding OnDeliverFormCommand}"
+                Style="{StaticResource buttonActionStyle}"
+                Text="Deliver" />
+
+            <Button
+                Command="{Binding OnSelectPlanCommand}"
+                Style="{StaticResource buttonActionStyle}"
+                Text="Select Plan Page" />
+
+            <Button
+                Command="{Binding OnSignUpCommand}"
+                Style="{StaticResource buttonActionStyle}"
+                Text="Sign Up" />
+
+            <Button
+                Command="{Binding OnOrderSummaryCommand}"
+                Style="{StaticResource buttonActionStyle}"
+                Text="Order Summary" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
