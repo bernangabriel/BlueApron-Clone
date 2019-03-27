@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="BlueApron.Controls.RadioButton"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    HorizontalOptions="Start"
+    VerticalOptions="Start">
+    <ContentView.Content>
+        <StackLayout HeightRequest="30" WidthRequest="30">
+            <Frame
+                Padding="2"
+                BorderColor="{StaticResource Key=colorGreyLight_100}"
+                HasShadow="False">
+                <Image x:Name="rbActive" Source="uncheck.png" />
+            </Frame>
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </StackLayout.GestureRecognizers>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

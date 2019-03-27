@@ -9,18 +9,21 @@ namespace BlueApron
         public App()
         {
             InitializeComponent();
-            var root = new Views.MainPage();
+            var root = new Views.SamplePage();
             MainPage = new NavigationPage(root);
         }
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            if (Properties.ContainsKey("sample"))
+            {
+                Properties["sample"] = "Hi there...";
+            }
         }
 
         protected override void OnSleep()
         {
-            // Handle when your app sleeps
+            Properties["sample"] = "Bernan G. Cordero";
         }
 
         protected override void OnResume()
