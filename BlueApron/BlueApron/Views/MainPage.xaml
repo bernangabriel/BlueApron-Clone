@@ -42,6 +42,11 @@
                 Command="{Binding OnOrderSummaryCommand}"
                 Style="{StaticResource buttonActionStyle}"
                 Text="Order Summary" />
+
+            <Button
+                Command="{Binding OnFoodWeekCommand}"
+                Style="{StaticResource buttonActionStyle}"
+                Text="Food Week" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

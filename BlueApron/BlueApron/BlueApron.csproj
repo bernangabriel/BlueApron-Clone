@@ -11,12 +11,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.264807" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <None Remove="Images\food_1.jpg" />
+    <None Remove="Images\food_2.jpg" />
+    <None Remove="Images\food_3.jpg" />
+    <None Remove="Images\food_4.jpg" />
+    <None Remove="Images\food_5.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <EmbeddedResource Include="Images\food_1.jpg" />
+    <EmbeddedResource Include="Images\food_2.jpg" />
+    <EmbeddedResource Include="Images\food_3.jpg" />
+    <EmbeddedResource Include="Images\food_4.jpg" />
+    <EmbeddedResource Include="Images\food_5.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.264807" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,6 +48,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\DeliverFormPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\FoodWeekPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\LoginPage.xaml">

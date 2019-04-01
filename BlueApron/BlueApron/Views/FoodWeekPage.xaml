@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BlueApron.Views.FoodWeekPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ext="clr-namespace:BlueApron.MarkupExtensions"
+    xmlns:model="clr-namespace:BlueApron.Models">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <!--  Colors  -->
+            <Color x:Key="colorGray">#bdc3c7</Color>
+            <Color x:Key="colorLigthGray">#dfe4ea</Color>
+            <Color x:Key="colorBlack">#000</Color>
+            <Color x:Key="colorWhite">#fff</Color>
+
+            <!--  Styles  -->
+            <Style x:Key="labelWeekStyle" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="labelDayStyle" TargetType="Label">
+                <Setter Property="Margin" Value="0,-10" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="11" />
+            </Style>
+
+            <Style x:Key="separatorLineStyle" TargetType="BoxView">
+                <Setter Property="WidthRequest" Value="1" />
+                <Setter Property="Color" Value="{StaticResource Key=colorLigthGray}" />
+            </Style>
+
+            <Style x:Key="separatorLineVerticalStyle" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="1" />
+                <Setter Property="Color" Value="{StaticResource Key=colorLigthGray}" />
+            </Style>
+
+            <!--  Arrays  -->
+            <Array x:Key="foodArray" Type="{Type model:Food}">
+                <model:Food
+                    Title="Sweet Chili And Vegetable Stir-Fry"
+                    Detail="with Garlic Rice"
+                    Image="food_1.jpg" />
+                <model:Food
+                    Title="Sweet Chili And Vegetable Stir-Fry"
+                    Detail="with Garlic Rice"
+                    Image="food_2.jpg" />
+                <model:Food
+                    Title="Sweet Chili And Vegetable Stir-Fry"
+                    Detail="with Garlic Rice"
+                    Image="food_3.jpg" />
+                <model:Food
+                    Title="Sweet Chili And Vegetable Stir-Fry"
+                    Detail="with Garlic Rice"
+                    Image="food_4.jpg" />
+                <model:Food
+                    Title="Sweet Chili And Vegetable Stir-Fry"
+                    Detail="with Garlic Rice"
+                    Image="food_5.jpg" />
+            </Array>
+
+            <!--  DataTemplates  -->
+            <DataTemplate x:Key="foodDataTemplate">
+                <ViewCell>
+                    <AbsoluteLayout Margin="0,0,0,10">
+                        <Image
+                            AbsoluteLayout.LayoutBounds="1,1,1,1"
+                            AbsoluteLayout.LayoutFlags="All"
+                            Aspect="AspectFill"
+                            Source="{Binding Image}" />
+
+                        <BoxView
+                            AbsoluteLayout.LayoutBounds="1,1,1,1"
+                            AbsoluteLayout.LayoutFlags="All"
+                            Opacity=".2"
+                            Color="{StaticResource Key=colorBlack}" />
+
+                        <Label
+                            Margin="5"
+                            AbsoluteLayout.LayoutBounds="0,1"
+                            AbsoluteLayout.LayoutFlags="PositionProportional"
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            Text="{Binding Title}"
+                            TextColor="{StaticResource Key=colorWhite}" />
+
+                    </AbsoluteLayout>
+                </ViewCell>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid Margin="0,10,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <BoxView Grid.Row="0" Style="{StaticResource separatorLineVerticalStyle}" />
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="0">
+                        <Label Style="{StaticResource labelWeekStyle}" Text="Week of" />
+                        <Label Style="{StaticResource labelDayStyle}" Text="JUL 1" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding OnSelectItemCommand}" CommandParameter="1" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                    <BoxView Grid.Column="1" Style="{StaticResource separatorLineStyle}" />
+                    <StackLayout Grid.Column="2">
+                        <Label Style="{StaticResource labelWeekStyle}" Text="Week of" />
+                        <Label Style="{StaticResource labelDayStyle}" Text="JUL 1" />
+                    </StackLayout>
+                    <BoxView Grid.Column="3" Style="{StaticResource separatorLineStyle}" />
+                    <StackLayout Grid.Column="4">
+                        <Label Style="{StaticResource labelWeekStyle}" Text="Week of" />
+                        <Label Style="{StaticResource labelDayStyle}" Text="JUL 1" />
+                    </StackLayout>
+                    <BoxView Grid.Column="5" Style="{StaticResource separatorLineStyle}" />
+                    <StackLayout Grid.Column="6">
+                        <Label Style="{StaticResource labelWeekStyle}" Text="Week of" />
+                        <Label Style="{StaticResource labelDayStyle}" Text="JUL 1" />
+                    </StackLayout>
+                </Grid>
+            </Grid>
+            <BoxView Grid.Row="2" Style="{StaticResource separatorLineVerticalStyle}" />
+
+            <Label Grid.Row="3" Margin="10,10,0,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontSize="11" Text="WEEK OF " />
+                        <Span
+                            FontAttributes="Bold"
+                            FontSize="11"
+                            Text="JUL 1" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <ListView
+                Grid.Row="4"
+                HasUnevenRows="True"
+                ItemTemplate="{StaticResource foodDataTemplate}"
+                ItemsSource="{StaticResource Key=foodArray}" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

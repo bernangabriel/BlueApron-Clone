@@ -13,9 +13,9 @@ namespace BlueApron.ViewModels
         public ICommand OnLoginCommand { get; private set; }
         public ICommand OnDeliverFormCommand { get; private set; }
         public ICommand OnSelectPlanCommand { get; private set; }
-
         public ICommand OnSignUpCommand { get; private set; }
         public ICommand OnOrderSummaryCommand { get; private set; }
+        public ICommand OnFoodWeekCommand { get; private set; }
         #endregion
 
         public MainPageViewModel()
@@ -25,6 +25,9 @@ namespace BlueApron.ViewModels
             OnSelectPlanCommand = new Command(() => OnNavigateToPage(new SelectPlanPage()));
             OnSignUpCommand = new Command(() => OnNavigateToPage(new SignUpPage()));
             OnOrderSummaryCommand = new Command(() => OnNavigateToPage(new OrderSummaryPage()));
+            OnFoodWeekCommand = new Command(() => OnNavigateToPage(new FoodWeekPage()));
+
+            
         }
 
         /// <summary>
